@@ -28,6 +28,7 @@ type GpioPinName =
     | ButtonFour = 24 // FIXME: this probably has a proper pin name
 
 [<RequireQualifiedAccess>]
+[<Struct>]
 type DisplayColor =
     | Black
     | White

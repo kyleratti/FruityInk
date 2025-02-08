@@ -1,9 +1,9 @@
 ﻿namespace InkySharp.Driver.InkyImpressionDriver
 
-open System
 open System.Device.Gpio
 open System.Diagnostics.CodeAnalysis
 open System.Threading.Tasks
+open InkySharp.Driver
 open InkySharp.Driver.InkyGpioWrapper
 open InkySharp.Driver.SpiDeviceWrapper
 open InkySharp.Driver.GpioControllerWrapper
@@ -218,10 +218,10 @@ type InkyImpressionWrapper internal ( // NOTE: we need the constructor to be int
             let buf =
                 buffer
                 |> Array2D.copy
-                |> conditionalMap isVerticalFlipped Array2DHelper.flipLeftRight
-                |> conditionalMap isHorizontalFlipped Array2DHelper.flipUpsideDown
-                |> conditionalMap (rotation <> 0) (Array2DHelper.rotate rotation)
-                |> Array2DHelper.flatten
+                |> conditionalMap isVerticalFlipped Array2DUtil.flipLeftRight
+                |> conditionalMap isHorizontalFlipped Array2DUtil.flipUpsideDown
+                |> conditionalMap (rotation <> 0) (Array2DUtil.rotate rotation)
+                |> Array2DUtil.flatten
 
             // TODO: I'd like to understand what this is doing, factor it out, and put unit tests on it
             let resultBuf =

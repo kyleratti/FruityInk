@@ -19,6 +19,7 @@
     <ItemGroup>
         <Compile Include="GpioControllerWrapper.fs" />
         <Compile Include="SpiDeviceWrapper.fs" />
+        <Compile Include="Array2DUtil.fs" />
         <Compile Include="InkyImpressionDriver.fs" />
         <Compile Include="InkyImpressionWrapper.fs" />
         <Compile Include="AssemblyInfo.fs" />

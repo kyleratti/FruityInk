@@ -1,18 +1,19 @@
 ﻿namespace InkySharp.Driver.GpioControllerWrapper
 
+open System
 open System.Device.Gpio
 open System.Diagnostics.CodeAnalysis
 open System.Threading
 open System.Threading.Tasks
 
 type IGpioControllerWrapper =
+    inherit IDisposable
     abstract member PinCount : int with get
     abstract member IsPinOpen : pinNumber:int -> bool
     abstract member OpenPin : pinNumber : int -> GpioPin
     abstract member OpenPin : pinNumber : int * mode : PinMode -> GpioPin
     abstract member OpenPin : pinNumber : int * mode : PinMode * initialValue : PinValue -> GpioPin
     abstract member ClosePin : pinNumber:int -> unit
-    abstract member Dispose : unit -> unit
     abstract member IsPinModeSupported : pinNumber:int * mode:PinMode -> bool
     abstract member GetPinMode : pinNumber:int -> PinMode
     abstract member SetPinMode : pinNumber:int * mode:PinMode -> unit

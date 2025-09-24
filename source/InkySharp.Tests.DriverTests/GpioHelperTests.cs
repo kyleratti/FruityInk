@@ -17,6 +17,12 @@ public class GpioHelperTests
 		_gpioHelper = new GpioHelper(gpio: _fakeGpio);
 	}
 
+	[TearDown]
+	public void TearDown()
+	{
+		_fakeGpio.Dispose();
+	}
+
 	[Test]
 	public async Task TestWaitForBusyPin_PinValueHigh()
 	{

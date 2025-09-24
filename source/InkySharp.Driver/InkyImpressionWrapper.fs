@@ -1,5 +1,6 @@
 ﻿namespace InkySharp.Driver.InkyImpressionDriver
 
+open System
 open System.Device.Gpio
 open System.Diagnostics.CodeAnalysis
 open System.Threading.Tasks
@@ -164,12 +165,25 @@ type InkyImpressionWrapper internal ( // NOTE: we need the constructor to be int
         | _ -> 0
 
     [<ExcludeFromCodeCoverage>]
+    [<Obsolete "Use device-specific static factory methods instead.">]
     static member Create (
         isHorizontalFlipped : bool,
         isVerticalFlipped : bool,
         spiBus : ISpiDeviceWrapper,
         gpio : IGpioControllerWrapper
-    ) =
+    ) : IInkyImpressionWrapper =
+        InkyImpressionWrapper.Create57MarkI (
+             isHorizontalFlipped = isHorizontalFlipped
+            ,isVerticalFlipped = isVerticalFlipped
+            ,spiBus = spiBus
+            ,gpio = gpio)
+
+    static member Create57MarkI (
+         isHorizontalFlipped : bool
+        ,isVerticalFlipped : bool
+        ,spiBus : ISpiDeviceWrapper
+        ,gpio : IGpioControllerWrapper
+    ) : IInkyImpressionWrapper =
         let inkyImpressionDriver = InkyImpressionDriver(
                 csPin = GpioPinName.Cs0,
                 dcPin = GpioPinName.Dc,

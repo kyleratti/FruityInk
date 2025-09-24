@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Kyle Ratti</Authors>
+        <PackageProjectUrl>https://github.com/kyleratti/InkySharp</PackageProjectUrl>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <!--<PackageReadmeFile>README.md</PackageReadmeFile>-->
+        <RepositoryUrl>https://github.com/kyleratti/InkySharp</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+        <!--<None Include=".\README.md" Pack="true" PackagePath="" />-->
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="DisplayAccessOrchestrator.fs" />
+        <Compile Include="DisplayCommunicationService.fs" />
+        <Compile Include="ServiceCollectionExtensions.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+      <PackageReference Include="Nito.AsyncEx" />
+      <PackageReference Include="SixLabors.ImageSharp" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\InkySharp.Driver\InkySharp.Driver.fsproj" />
+    </ItemGroup>
+
+</Project>

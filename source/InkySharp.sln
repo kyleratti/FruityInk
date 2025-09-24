@@ -11,6 +11,10 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "InkySharp.Driver", "InkySha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkySharp.Tests.DriverTests", "InkySharp.Tests.DriverTests\InkySharp.Tests.DriverTests.csproj", "{77324D9A-91B7-4F02-A960-6DC93D647529}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "InkySharp.Driver.Extensions", "InkySharp.Driver.Extensions\InkySharp.Driver.Extensions.fsproj", "{23358A71-8B23-48F3-9E57-780018E7A006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkySharp.Tests.DriverExtensionsTests", "InkySharp.Tests.DriverExtensionsTests\InkySharp.Tests.DriverExtensionsTests.csproj", "{89FFE84C-F9CE-468A-B5C6-7FD3896E1754}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{79DB3EE3-BFA7-4AD9-BEC3-5206642C5A70} = {143DED2C-206F-4691-8512-FB20B59BE5DB}
 		{77324D9A-91B7-4F02-A960-6DC93D647529} = {3589AE45-13E4-44B5-8D43-A0D77AFBAD1F}
+		{23358A71-8B23-48F3-9E57-780018E7A006} = {143DED2C-206F-4691-8512-FB20B59BE5DB}
+		{89FFE84C-F9CE-468A-B5C6-7FD3896E1754} = {3589AE45-13E4-44B5-8D43-A0D77AFBAD1F}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{79DB3EE3-BFA7-4AD9-BEC3-5206642C5A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -32,5 +38,13 @@ Global
 		{77324D9A-91B7-4F02-A960-6DC93D647529}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77324D9A-91B7-4F02-A960-6DC93D647529}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77324D9A-91B7-4F02-A960-6DC93D647529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23358A71-8B23-48F3-9E57-780018E7A006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23358A71-8B23-48F3-9E57-780018E7A006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23358A71-8B23-48F3-9E57-780018E7A006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23358A71-8B23-48F3-9E57-780018E7A006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FFE84C-F9CE-468A-B5C6-7FD3896E1754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FFE84C-F9CE-468A-B5C6-7FD3896E1754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FFE84C-F9CE-468A-B5C6-7FD3896E1754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FFE84C-F9CE-468A-B5C6-7FD3896E1754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
